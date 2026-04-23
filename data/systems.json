@@ -1,0 +1,22 @@
+{
+  "systems": [
+    {
+      "id": 100,
+      "name": "Web Server",
+      "status": "online",
+      "latency": 50
+    },
+    {
+      "id": 200,
+      "name": "Database",
+      "status":  "degraded",
+      "latency": 100 
+    },
+    {
+      "id": 300,
+      "name": "API Gateway",
+      "status":  "offline",
+      "latency": 200 
+    }
+  ]
+}
