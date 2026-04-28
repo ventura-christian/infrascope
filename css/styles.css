@@ -150,12 +150,62 @@ body::before {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  position: relative;
+}
+
+.nav-trigger::before,
+.nav-trigger::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+.nav-trigger::before {
+  color: var(--color-accent-secondary);
+  z-index: -1;
+  transform: translate(-1px, 1px);
+}
+
+.nav-trigger::after {
+  color: var(--color-accent-secondary);
+  z-index: -2;
+  transform: translate(-1px, 1px);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.nav-trigger:hover {
+  animation: glitch 0.1s ease-out;
 }
 
 .nav-menu {
   list-style: none;
   margin-top: 1rem;
-  display: none;
+  display: flex;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s ease;
   flex-direction: column;
   gap: 0.5rem;
 }
@@ -174,4 +224,10 @@ body::before {
 .nav-menu a:hover {
   color: var(--color-accent-secondary);
   transform: translateX(5px);
+}
+
+.nav-control:hover .nav-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
