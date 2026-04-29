@@ -22,8 +22,8 @@
 
           <ul id="nav-menu" class="nav-menu">
             <li><a href="#" data-mode="dashboard">Dashboard</a></li>
-            <li><a href="#" data-mode="storage">Data</a></li>
-            <li><a href="#" data-mode="feed">Preferences</a></li>
+            <li><a href="#" data-mode="storage">Storage</a></li>
+            <li><a href="#" data-mode="feed">Feed</a></li>
           </ul>
         </div>
       </nav>
@@ -35,33 +35,34 @@
         <p class="ui-subtitle">Observe your systems</p>
       </section>
 
+      <!-- rework the layout for the dashboard stage-->
+
       <section id="dashboard" class="layout-container">
         <h2 class="ui-section-title">
-          Dashboard
+          Information Retrieved:
           <span id="mode-label">[SYSTEM]</span>
         </h2>
 
-        <div class="dashboard-stage">stage</div>
+        <div class="dashboard-stage">
+          <div class="dashboard-noise"></div>
+          <div class="dashboard-glyphs"></div>
 
-        <div class="dashboard-noise"></div>
+          <section id="tools" class="layout-grid dashboard-content">
+            <section id="data-viewer" data-view="dashboard">
+              <h3>&gt;&gt; Systems</h3>
+              <div id="systems-container"></div>
+              <!-- section will display "online", "degraded", "offline" -->
+            </section>
 
-        <div class="dashboard-glyphs"></div>
+            <section id="storage" data-view="storage">
+              <h3>&gt;&gt; Storage</h3>
+            </section>
 
-        <section id="tools" class="layout-grid dashboard-content">
-          <section id="data-viewer" data-view="dashboard">
-            <h3>&gt;&gt; Systems</h3>
-            <div id="systems-container"></div>
-            <!-- section will display "online", "degraded", "offline" -->
+            <section id="carousel" data-view="feed">
+              <h3>&gt;&gt; Feed</h3>
+            </section>
           </section>
-
-          <section id="storage" data-view="storage">
-            <h3>&gt;&gt; Storage</h3>
-          </section>
-
-          <section id="carousel" data-view="feed">
-            <h3>&gt;&gt; Feed</h3>
-          </section>
-        </section>
+        </div>
       </section>
     </main>
     <footer>Copyright &copy; christian_Ventura_2026</footer>

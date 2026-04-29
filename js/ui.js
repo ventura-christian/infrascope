@@ -10,7 +10,7 @@ export function renderSystems(systems) {
 
     card.classList.add("system-card", system.status);
 
-    card.innerHTML = `<span>${system.name}</span><span>${system.latency}</span>`;
+    card.innerHTML = `<span>${system.name}</span><span>${system.latency}ms</span>`;
 
     container.appendChild(card);
   });
