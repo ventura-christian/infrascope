@@ -1,6 +1,6 @@
 "use strict";
 
-export function renderSystems(system) {
+export function renderSystems(systems) {
   const container = document.getElementById("systems-container");
 
   container.innerHTML = "";
