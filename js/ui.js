@@ -23,7 +23,7 @@ toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-const modeLinks = document.querySelectorAll("[data-model]");
+const modeLinks = document.querySelectorAll("[data-mode]");
 const body = document.body;
 const label = document.getElementById("mode-label");
 
