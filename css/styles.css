@@ -89,13 +89,14 @@ body::before {
 }
 
 .dashboard-glyphs::before {
-  content: "01010101 1010 091 INFRA SYS NET API NODE 050326";
+  content: "0503 V01.26 INFRA SYS NET API NODE 0592 0821 1091 ";
   position: absolute;
   white-space: nowrap;
   font-family: monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
   color: var(--color-warning);
-  opacity: 0.1;
+  opacity: 0.3;
   animation: scrollGlyphs 20s linear infinite;
 }
 
@@ -325,4 +326,20 @@ body[data-mode="feed"] [data-view="feed"] {
   50% {
     opacity: 1;
   }
+}
+
+.ui-signal {
+  display: flex;
+  gap: 1rem;
+  font-family: monospace;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.signal-label {
+  color: var(--color-text-secondary);
+}
+
+.signal-value {
+  color: var(--color-accent-secondary);
 }

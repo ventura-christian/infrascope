@@ -32,6 +32,10 @@
     <main class="layout-main">
       <section id="hero" class="layout-fullscreen">
         <h1 class="ui-title">InfraScope</h1>
+        <div class="ui-signal">
+          <span class="signal-label">MODE</span>
+          <span class="signal-value">SYSTEMS</span>
+        </div>
         <p class="ui-subtitle">Observe your systems</p>
       </section>
 
@@ -50,18 +54,23 @@
           <div class="dashboard-glyphs"></div>
 
           <section id="tools" class="layout-grid dashboard-content">
-            <section id="data-viewer" data-view="dashboard">
+            <!-- go back and update and verify the three section data-view naming conventions -->
+
+            <section id="systems-view" data-view="dashboard">
               <h3>&gt;&gt; Systems</h3>
+              <br />
               <div id="systems-container"></div>
               <!-- section will display "online", "degraded", "offline" -->
             </section>
 
             <section id="storage" data-view="storage">
               <h3>&gt;&gt; Storage</h3>
+              <br />
             </section>
 
             <section id="carousel" data-view="feed">
               <h3>&gt;&gt; Feed</h3>
+              <br />
             </section>
           </section>
         </div>
