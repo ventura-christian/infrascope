@@ -49,3 +49,25 @@ modeLinks.forEach((link) => {
     document.dispatchEvent(new CustomEvent("modeChange", { detail: mode }));
   });
 });
+
+const glyphLayer = document.querySelector(".dashboard-glyphs");
+
+document.addEventListener("modeChange", (e) => {
+  const mode = e.detail;
+
+  let text = "";
+
+  if (mode === "dashboard") {
+    text = "SYS ONLINE NODE ACTIVE LATENCY OK";
+  }
+
+  if (mode === "storage") {
+    text = "CACHE WRITE READ MEMORY INDEX IO";
+  }
+
+  if (mode === "feed") {
+    text = "STREAM DATA PACKET EVENT LOG SIGNAL";
+  }
+
+  glyphLayer.style.setProperty("--glyph-content", `"${text}`);
+});

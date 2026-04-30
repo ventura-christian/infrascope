@@ -76,12 +76,12 @@ body.mode-switch .dashboard-stage {
 }
 
 body[data-mode="dashboard"] .dashboard-glyphs::before {
-  opacity: 0.3;
+  opacity: 0.4;
   color: var(--color-warning);
 }
 
 body[data-mode="storage"] .dashboard-glyphs::before {
-  opacity: 0.15;
+  opacity: 0.4;
   color: var(--color-accent-secondary);
 }
 
@@ -126,7 +126,7 @@ body[data-mode="feed"] .dashboard-glyphs::before {
 }
 
 .dashboard-glyphs::before {
-  content: "0503 V01.26 INFRA SYS NET API NODE 0592 0821 1091 ";
+  content: var(--glyph-content);
   position: absolute;
   white-space: nowrap;
   font-family: monospace;
