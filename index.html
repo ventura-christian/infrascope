@@ -32,14 +32,12 @@
     <main class="layout-main">
       <section id="hero" class="layout-fullscreen">
         <h1 class="ui-title">InfraScope</h1>
-        <div class="ui-signal">
+        <!-- <div class="ui-signal">
           <span class="signal-label">MODE</span>
           <span id="signal-value" class="signal-value">SYSTEMS</span>
-        </div>
+        </div> -->
         <p class="ui-subtitle">Observe your systems</p>
       </section>
-
-      <!-- rework the layout for the dashboard stage-->
 
       <section id="dashboard" class="layout-container">
         <h2 class="ui-section-title">
@@ -47,15 +45,21 @@
           <span id="mode-label">[SYSTEMS]</span>
         </h2>
 
-        <p class="ui-context">Active view updates based on selected mode.</p>
+        <div class="ui-context">
+          <p>
+            Monitoring Active System Layer:
+            <span id="context-mode">SYSTEMS</span>
+          </p>
+          <p class="context-secondary">
+            Select a mode to inspect different infrastructure signals.
+          </p>
+        </div>
 
         <div class="dashboard-stage">
           <div class="dashboard-noise"></div>
           <div class="dashboard-glyphs"></div>
 
           <section id="tools" class="layout-grid dashboard-content">
-            <!-- go back and update and verify the three section data-view naming conventions -->
-
             <section id="systems-view" data-view="dashboard">
               <h3>&gt;&gt; Systems</h3>
               <br />
