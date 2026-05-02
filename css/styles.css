@@ -318,6 +318,23 @@ body[data-mode="feed"] .dashboard-glyphs::before {
   color: var(--color-accent-primary);
 }
 
+body[data-mode="dashboard"] [data-view="dashboard"],
+body[data-mode="storage"] [data-view="storage"],
+body[data-mode="feed"] [data-view="feed"] {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .dashboard-content {
   position: relative;
   margin-top: 1rem;
@@ -325,7 +342,7 @@ body[data-mode="feed"] .dashboard-glyphs::before {
 }
 
 #tools {
-  transform: translateY(40px);
+  /* transform: translateY(40px); */
   transition: all 0.2s ease;
 }
 
@@ -366,23 +383,17 @@ body[data-mode="feed"] .dashboard-glyphs::before {
   border-color: var(--color-danger);
 }
 
-[data-view] {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: all 0.4s ease;
-}
-
-[data-view="dashboard"] {
-  grid-column: span 2;
-}
-
 body[data-mode="dashboard"] [data-view="dashboard"],
 body[data-mode="storage"] [data-view="storage"],
 body[data-mode="feed"] [data-view="feed"] {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.view {
+  display: none;
+  animation: fadeIn 0.25s ease;
 }
 
 #mode-label {
