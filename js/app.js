@@ -13,11 +13,20 @@ const state = {
   },
 };
 
-document.addEventListener("click", () => {
+function updateInteraction() {
   state.session.lastInteraction = Date.now();
   state.session.interactions++;
 
   logEvent("User interaction detected");
+}
+document.addEventListener("click", updateInteraction);
+document.addEventListener("keydown", updateInteraction);
+document.addEventListener("scroll", updateInteraction);
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    updateInteraction();
+  }
 });
 
 function simulateSession() {
