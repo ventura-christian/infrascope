@@ -9,6 +9,12 @@
     />
     <meta name="author" content="Christian Ventura" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="module" src="js/app.js" defer></script>
     <title>InfraScope</title>
   </head>
@@ -37,13 +43,13 @@
       <section id="dashboard" class="layout-container">
         <h2 class="ui-section-title">
           SYSTEM INTERFACE
-          <span id="mode-label">[SYSTEMS]</span>
+          <span id="mode-label">[FEED]</span>
         </h2>
 
         <div class="ui-context">
           <p>
             Monitoring Active System Layer:
-            <span id="context-mode">SYSTEMS</span>
+            <span id="context-mode">FEED</span>
           </p>
           <p class="context-secondary">
             Select a mode to inspect different infrastructure signals.
@@ -69,6 +75,12 @@
             <div id="feed" class="view" data-view="feed">
               <h3>&gt;&gt; EVENT FEED</h3>
               <br />
+
+              <div class="carousel">
+                <div><p>System initialized</p></div>
+                <div><p>Monitoring active nodes</p></div>
+                <div><p>Awaiting new events</p></div>
+              </div>
               <div id="feed-container"></div>
             </div>
           </section>

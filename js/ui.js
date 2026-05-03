@@ -9,7 +9,6 @@ export function renderSystems(systems) {
     const card = document.createElement("div");
 
     card.classList.add("system-card", system.status);
-
     card.innerHTML = `<span>${system.name}</span><span>${system.latency}ms</span>`;
 
     container.appendChild(card);
@@ -87,6 +86,5 @@ export function renderFeed(feed) {
     div.innerHTML = `<span class="feed-msg">[${entry.message}]</span>`;
 
     container.appendChild(div);
-    console.log("FEED CONTAINER:", container);
   });
 }

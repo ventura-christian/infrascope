@@ -501,3 +501,16 @@ body[data-mode="feed"] [data-view="feed"] {
     grid-template-columns: 2fr 1fr;
   }
 }
+
+.carousel {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-accent-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.carousel p {
+  font-family: monospace;
+  color: var(--color-warning);
+}

@@ -46,7 +46,6 @@ async function init() {
 }
 
 init();
-console.log("INIT SUCCESS");
 
 function logEvent(message) {
   const timestamp = new Date().toLocaleTimeString();
@@ -61,8 +60,6 @@ function logEvent(message) {
   }
 
   console.log(`[${timestamp}] ${message}`);
-  console.log("FEED STATE:", state.feed);
-
   renderFeed(state.feed);
 }
 
@@ -93,3 +90,13 @@ function simulateSystems() {
 }
 
 setInterval(simulateSystems, 3000);
+
+window.addEventListener("load", () => {
+  if (window.$ && $(".carousel").length) {
+    $(".carousel").slick({
+      autoplay: true,
+      arrows: false,
+      dots: true,
+    });
+  }
+});
