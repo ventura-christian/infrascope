@@ -1,7 +1,7 @@
 "use strict";
 
 import { fetchSystems } from "./api.js";
-import { renderSystems } from "./ui.js";
+import { renderSystems, renderFeed } from "./ui.js";
 
 const state = {
   systems: [],
@@ -61,6 +61,9 @@ function logEvent(message) {
   }
 
   console.log(`[${timestamp}] ${message}`);
+  console.log("FEED STATE:", state.feed);
+
+  renderFeed(state.feed);
 }
 
 function simulateSystems() {

@@ -337,6 +337,27 @@ body[data-mode="feed"] [data-view="feed"] {
   display: block;
 }
 
+#feed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feed-entry {
+  padding: 0.75rem;
+  border-left: 2px solid var(--color-accent-primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.feed-time {
+  color: var(--color-text-secondary);
+  margin-right: 0.5rem;
+}
+
+.feed-msg {
+  color: var(--color-accent-secondary);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

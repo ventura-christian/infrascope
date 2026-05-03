@@ -71,3 +71,22 @@ document.addEventListener("modeChange", (e) => {
 
   glyphLayer.style.setProperty("--glyph-content", `"${text}`);
 });
+
+export function renderFeed(feed) {
+  const container = document.getElementById("feed-container");
+
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  feed.forEach((entry) => {
+    const div = document.createElement("div");
+    div.classList.add("feed-entry");
+
+    div.innerHTML = `<span class="feed-time">[${entry.timestamp}]</span>`;
+    div.innerHTML = `<span class="feed-msg">[${entry.message}]</span>`;
+
+    container.appendChild(div);
+    console.log("FEED CONTAINER:", container);
+  });
+}
