@@ -517,7 +517,12 @@ body[data-mode="feed"] [data-view="feed"] {
 
 .slick-dots {
   list-style: none;
-  margin-top: 0.5rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .slick-dots li {
@@ -525,9 +530,34 @@ body[data-mode="feed"] [data-view="feed"] {
   margin: 0 4px;
 }
 
+.slick-dots li button {
+  background: none;
+  border: 1px solid var(--color-success);
+  font-family: monospace;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  /* width: fit-content; */
+  outline: none;
+}
+
 .slick-dots li button::before {
   color: var(--color-accent-tertiary);
   font-size: 8px;
+  content: "" !important;
+}
+
+.slick-dots li button:hover {
+  color: var(--color-accent-secondary);
+  border-color: var(--color-warning);
+  transform: translateX(2px);
+  transition: all 0.15s ease;
+}
+
+.slick-dots li.slick-active button {
+  border-color: var(--color-danger);
+  color: var(--color-accent-primary);
 }
 
 .slick-slide {
