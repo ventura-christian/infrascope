@@ -167,7 +167,7 @@ body::before {
 
 .nav-menu.active {
   opacity: 1;
-  transform: translateY(10);
+  transform: translateY(10px);
   pointer-events: auto;
 }
 

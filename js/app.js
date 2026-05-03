@@ -9,11 +9,12 @@ const state = {
   session: {
     startTime: Date.now(),
     interactions: 0,
+    lastInteraction: Date.now(),
   },
 };
 
 document.addEventListener("click", () => {
-  state.session.lastInteraction = DataTransfer.now();
+  state.session.lastInteraction = Date.now();
   state.session.interactions++;
 
   logEvent("User interaction detected");
@@ -36,6 +37,7 @@ async function init() {
 }
 
 init();
+console.log("INIT SUCCESS");
 
 function logEvent(message) {
   const timestamp = new Date().toLocaleTimeString();
