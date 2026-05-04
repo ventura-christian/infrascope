@@ -522,9 +522,6 @@ body[data-mode="feed"] [data-view="feed"] {
   padding: 1rem;
   border-radius: 5px;
   background: transparent;
-}
-
-.carousel {
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -549,6 +546,20 @@ body[data-mode="feed"] [data-view="feed"] {
   font-family: monospace;
   color: var(--color-success);
   text-shadow: 0 0 4px var(--color-accent-primary);
+}
+
+.carousel img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel .slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .slick-dots {
