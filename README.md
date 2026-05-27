@@ -5,7 +5,7 @@ InfraScope is a single-page web dashboard that simulates real-time infrastructur
 
 The application is built using vanilla JavaScript with modular structure and focuses on state-driven UI updates, simulated system behavior, and DOM-based rendering.
 
----
+Webpage link --  [live demo](https://ventura-christian.github.io/infrascope/)
 
 ## Features
 
@@ -42,7 +42,6 @@ The application is built using vanilla JavaScript with modular structure and foc
 - Displays rotating media content
 - Initialized when feed mode becomes active
 
----
 
 ## Technology Stack
 - HTML5
@@ -50,8 +49,6 @@ The application is built using vanilla JavaScript with modular structure and foc
 - Vanilla JavaScript (ES Modules)
 - jQuery (required for Slick Carousel)
 - Slick Carousel (media slider)
-
----
 
 ## Architecture
 
@@ -71,7 +68,7 @@ The application is built using vanilla JavaScript with modular structure and foc
 - User interactions update session tracking metrics
 - System simulation runs on timed intervals
 
----
+
 
 ## Behavior Model
 - System metrics update on intervals to simulate real infrastructure behavior
@@ -79,7 +76,7 @@ The application is built using vanilla JavaScript with modular structure and foc
 - Feed logs both system and user-driven events
 - Carousel initializes only when feed mode is active
 
----
+
 
 ## Known Design Constraints
 - Carousel must initialize only when visible
@@ -87,7 +84,6 @@ The application is built using vanilla JavaScript with modular structure and foc
 - System rendering depends on proper API data hydration
 - DOM updates are event-driven, not declarative
 
----
 
 ## Purpose
 This project is designed as a learning environment for:
@@ -97,7 +93,7 @@ This project is designed as a learning environment for:
 - modular JavaScript architecture
 - event-driven UI systems
 
----
+
 
 ## Development Notes
 - Ensure system data is loaded before rendering dashboards
@@ -105,7 +101,6 @@ This project is designed as a learning environment for:
 - Maintain a single source of truth for mode changes
 - Keep UI modules separated from application lifecycle logic
 
----
 
 ## Future Improvements
 - Centralized state manager for mode handling
